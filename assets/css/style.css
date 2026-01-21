@@ -1,0 +1,72 @@
+@import url(./global.css);
+@import url(./reset.css);
+
+header{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    grid-area: header;
+    background-image: url(../images/Header_Background.png);
+    background-size: cover;
+    background-position: right bottom;
+}
+
+.header{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+
+    width: min-content;
+
+    text-align: left;
+    color: white;
+}
+
+.header h1{
+    max-width: 278px;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 32px;
+}
+
+.header p{
+    max-width: 381px;
+    font-size: 16px;
+}
+
+.header button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 381px;
+    height: 52px;
+    border: none;
+    border-radius: 28px;
+
+    font-size: 16px;
+
+    background-color: white;
+}
+
+.header button:nth-last-child(1){
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+    background-color: var(--dark-gray);
+}
+
