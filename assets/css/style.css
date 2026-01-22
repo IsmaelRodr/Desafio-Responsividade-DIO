@@ -18,7 +18,9 @@ header{
     flex-flow: column nowrap;
     gap: 24px;
 
-    width: min-content;
+    width: 100%;
+    max-width: 381px;
+    padding: 69px 0px;
 
     text-align: left;
     color: white;
@@ -28,14 +30,25 @@ header{
     max-width: 278px;
     font-family: "Luckiest Guy", cursive;
     font-size: 32px;
+    font-weight: 400;
 }
 
 .header p{
     max-width: 381px;
+    width: 100%;
     font-size: 16px;
+    font-weight: 400;
 }
 
-.header button{
+.header div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.header div button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +59,7 @@ header{
     border-radius: 28px;
 
     font-size: 16px;
+    font-weight: 400;
 
     background-color: white;
 }
@@ -55,11 +69,54 @@ header{
     color: white;
 }
 
-
 main{
     grid-area: main;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.item{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+
+    padding: 40px 0px;
+
+}
+
+.item div{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 370px;
+}
+
+.item div h2{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.item div p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.item:nth-of-type(2n){
+    background-color: var(--light-gray);
+}
+
+.item-4 div{
+    max-width: 378px;
+}
+
+.item-4 div h2{
+    font-family: "Luckiest Guy", cursive;
+    font-size: 32px;
+    font-weight: 400;
 }
 
 footer{
@@ -70,3 +127,81 @@ footer{
     background-color: var(--dark-gray);
 }
 
+@media screen and (min-width: 769px){
+    header{
+        background-image: url(../images/Header_Background_desktop.png);
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header{
+        height: 459px;
+        max-width: 757px;
+
+        padding: 0;
+
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header h1{
+        max-width: 313px;
+        font-family: "Luckiest Guy", cursive;
+        font-size: 56px;
+        font-weight: 400;
+    }
+
+    .header p{
+        max-width: 757px;
+    }
+
+    .header div{
+        flex-direction: row;
+    }
+
+    .header div button{
+        width: 281px;
+        height: 44px;
+    }
+
+    .item{
+        flex-flow: row nowrap;
+        gap: 16px;
+    }
+
+    .item div{
+        width: 348px;
+    }
+
+    .item div h2{
+        font-weight: 800;
+        font-size: 40px;
+    }
+    
+    .item div p{
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .item-2 picture{
+        order: 1;
+    }
+
+    .item-4{
+        flex-direction: column;
+    }
+
+    .item-4 div{
+        width: 100%;
+        max-width: 802px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-4 div h2{
+        max-width: 608px;
+    }
+}
